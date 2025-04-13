@@ -475,3 +475,4 @@ UnboundLocalError: cannot access local variable 'video_url' where it is not asso
 2025-04-13 11:31:26,737 - INFO - PEXELS API used: 2/200. Remaining: 198
 2025-04-13 11:31:30,282 - INFO - PEXELS API used: 3/200. Remaining: 197
 2025-04-13 11:31:33,091 - INFO - Downloaded new videos for request_id 7d0aba75
+2025-04-13 11:55:02,032 - INFO - Cleaned up files for request_id 7d0aba75
