@@ -476,3 +476,6 @@ UnboundLocalError: cannot access local variable 'video_url' where it is not asso
 2025-04-13 11:31:30,282 - INFO - PEXELS API used: 3/200. Remaining: 197
 2025-04-13 11:31:33,091 - INFO - Downloaded new videos for request_id 7d0aba75
 2025-04-13 11:55:02,032 - INFO - Cleaned up files for request_id 7d0aba75
+2025-04-13 14:32:42,398 - INFO - Use pytorch device_name: cpu
+2025-04-13 14:32:42,399 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-13 14:32:48,069 - INFO - Ensured all required directories exist.
