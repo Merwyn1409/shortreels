@@ -1,0 +1,28 @@
+name: Deploy to AWS Lightsail
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        known_hosts: "just-a-placeholder-so-we-dont-get-errors"
+
+    - name: Deploy to Lightsail
+      run: |
+        ssh -o StrictHostKeyChecking=no \
+            ubuntu@${{ secrets.LIGHTSAIL_INSTANCE_IP }} \
+            "cd /home/ubuntu/shortreels && \
+             git pull origin main && \
+             source venv/bin/activate && \
+             pip install -r requirements.txt && \
+             sudo systemctl restart shortreels"
