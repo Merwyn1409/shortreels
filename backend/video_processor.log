@@ -479,3 +479,6 @@ UnboundLocalError: cannot access local variable 'video_url' where it is not asso
 2025-04-13 14:32:42,398 - INFO - Use pytorch device_name: cpu
 2025-04-13 14:32:42,399 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
 2025-04-13 14:32:48,069 - INFO - Ensured all required directories exist.
+2025-04-13 14:33:23,405 - INFO - Use pytorch device_name: cpu
+2025-04-13 14:33:23,411 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-13 14:33:29,362 - INFO - Ensured all required directories exist.
