@@ -15,7 +15,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        known_hosts: "just-a-placeholder-so-we-dont-get-errors"
+        known_hosts: "optional"
 
     - name: Deploy to Lightsail
       run: |
@@ -23,6 +23,10 @@ jobs:
             ubuntu@${{ secrets.LIGHTSAIL_INSTANCE_IP }} \
             "cd /home/ubuntu/shortreels && \
              git pull origin main && \
+             sudo apt-get update && \
+             sudo apt-get install -y ffmpeg && \
              source venv/bin/activate && \
+             pip install --upgrade pip wheel setuptools && \
              pip install -r requirements.txt && \
+             python -m spacy download en_core_web_sm && \
              sudo systemctl restart shortreels"

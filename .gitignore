@@ -20,3 +20,16 @@ build/
 # Secrets
 *.pem
 *.key
+
+
+# VSCode History
+.history/
+
+# Temporary data files
+backend/data/audio_output/
+backend/data/cached_api_videos/
+backend/data/output/
+
+# Virtual environments
+testenv/
+venv/
