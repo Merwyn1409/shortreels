@@ -35,3 +35,6 @@ testenv/
 venv/
 .venv1/
 .venv2/
+
+
+backend/video_processor.log
