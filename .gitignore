@@ -33,3 +33,5 @@ backend/data/output/
 # Virtual environments
 testenv/
 venv/
+.venv1/
+.venv2/
